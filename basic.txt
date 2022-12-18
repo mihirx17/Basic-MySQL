@@ -1,0 +1,51 @@
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| student            |
+| student_info       |
+| sys                |
++--------------------+
+6 rows in set (0.00 sec)
+
+mysql> create database collage_info;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| collage_info       |
+| information_schema |
+| mysql              |
+| performance_schema |
+| student            |
+| student_info       |
+| sys                |
++--------------------+
+7 rows in set (0.00 sec)
+
+mysql> use collage_info;
+Database changed
+mysql> create table student_info(
+    -> name varchar(100) not null,
+    -> age int not null,
+    -> address text,
+    -> phone_number int,
+    -> birth_date date not null);
+Query OK, 0 rows affected (0.02 sec)
+mysql> insert into student_info value ("tony",12,"kolkata",1231,"2002-11-17");
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select *from student_info;
++------+-----+---------+--------------+------------+
+| name | age | address | phone_number | birth_date |
++------+-----+---------+--------------+------------+
+| tony |  12 | kolkata |         1231 | 2002-11-17 |
++------+-----+---------+--------------+------------+
+1 row in set (0.00 sec)
+
+mysql>
